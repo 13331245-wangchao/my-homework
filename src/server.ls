@@ -21,14 +21,6 @@ app.use passport.initialize!
 app.use passport.session!
 app.use flash!
 
-# app.get '/api/random', (req, res)!-> 
-#   from = req.param 'from'
-#   set-timeout !->
-#     res.set 'Content-Type', 'text/plain'
-#     res.send '' + random = Math.floor Math.random! * 10
-#     console.log "Request from #{from}, answer random number: #{random}"
-#   , 1000ms + Math.random! * 2000ms
-
 initPassport = require './passport/init'
 initPassport passport
 routes = (require './routes/index') passport
